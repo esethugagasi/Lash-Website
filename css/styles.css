@@ -1,0 +1,159 @@
+*{
+  
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    
+  }
+  html, body{
+    text-decoration: none;
+  
+  }
+/* ___________________________container of the page______________________ */
+.container{
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 100vh; /* This ensures the container takes up the full viewport height */
+  /* background-color: rgb(255, 0, 64); */
+}
+  /* ______________________________logo style___________________________ */
+.lash_logo{
+
+	/*Styling*/
+  height: 15vh;
+  padding: 0; 
+  margin: 0px 10px 500px 50px;
+
+}
+/* _______________________________slides________________________________ */
+.card{
+
+	/**positioning*/
+	position: absolute;
+
+	/*Styling*/
+	width:100vh;
+  height: 70vh;
+	border-radius:18px;
+	top:150px;
+	bottom:0px;	
+  margin: 0px 0px 0px 50px;
+	box-shadow: -5px 0px 20px rgb(136, 136, 136);;
+
+	/*background*/
+	background: url(../images/lash_bg.jpg);
+    /*background-color: white;*/
+	opacity:0.5s;
+
+	/*Topography*/
+	padding:1cm;
+
+	/*Behavior*/
+	transition:left 0.7s;
+
+}
+
+#card1{
+	z-index: 1;
+	left:30vh;
+
+}
+#card2{
+	z-index: 2;
+	left:88vh;
+}
+
+#card3{
+	z-index: 3;
+	left:93vh;
+
+}
+
+#card4{
+	z-index: 4;
+	left:98vh;
+}
+#card5{
+	z-index: 5;
+	left:103vh;
+}
+
+/*________________________card(slides) hover___________________________*/
+
+#card1:hover{
+	left:-1cm;
+}
+#card2:hover{
+	left: 1cm;
+ 
+}
+#card3:hover{
+	left:2cm;
+}
+#card4:hover{
+	left: 3cm;
+}
+#card5:hover{
+	left: 4cm;
+} 
+
+/*________________________socials media___________________________*/
+
+.social_links{
+  display: flex;
+  justify-content: space-between; /* Evenly space items with space in-between */
+  align-items: center; /* Center items vertically */
+  width: 100%; /* Adjust the width as needed */
+  /* height: 200%; */
+  margin: 0 auto; /* Center the container horizontally */
+}
+ /* Apply styles to the link items */
+ .link-item {
+  text-align: center;
+  width: 100%; /* Equal width for each link */
+}
+
+/* Apply styles to the link images */
+.link-image {
+  max-width: 100%; /* Ensure images don't exceed their original width */
+}
+
+/*________________________Portfolio___________________________*/
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 15px; /* Gap between grid items */
+  justify-items: center; /* Center items horizontally */
+}
+
+/* Apply styles to the portfolio images */
+.portfolio-image {
+  width: 140px;
+  max-width: 100%; /* Ensure images don't exceed their original width */
+  height: auto; /* Maintain aspect ratio */
+}
+/*________________________Contact form___________________________*/
+
+.contact_form { 
+	padding: 0; 
+	width: 410px; 
+}
+
+.contact_form form { 
+	margin: 0px; 
+	padding: 0px; 
+}
+
+.contact_form form .input_field { 
+	width: 300px; 
+	padding: 3px; 
+	color: #ccc; 
+	border: 1px solid #444444;  
+	background: #262626; 
+	margin-bottom: 10px; 
+	font-family: Tahoma, Geneva, sans-serif; 
+	font-size: 11px;
+}
+
