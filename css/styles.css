@@ -14,7 +14,45 @@
 	font-weight: bolder;
 	margin-bottom: 5px;
   }
+  /* ___________________________navigation bar______________________ */
 
+    /* __logo style______ */
+.lash_logo{
+
+	height: 15vh;
+}
+/* Reset default list styles */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the navigation bar */
+nav {
+    background-color: #f7bfd9;
+    color: white;
+	height: 16.6vh;
+	
+}
+
+/* Style the navigation links */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff5733; /* Change the color on hover */
+}
 /* ___________________________container of the page______________________ */
 .container{
   display: flex;
@@ -23,15 +61,7 @@
   height: 100vh; /* This ensures the container takes up the full viewport height */
   /* background-color: rgb(255, 0, 64); */
 }
-  /* ______________________________logo style_____________________________ */
-.lash_logo{
 
-	/*Styling*/
-  height: 15vh;
-  padding: 0; 
-  margin: 0px 10px 500px 50px;
-
-}
 /* _______________________________slides________________________________ */
 .card{
 
@@ -162,7 +192,6 @@
 	padding: 3px; 
 	color: #ccc; 
 	border: 1px solid #444444;  
-	/* background: #262626;  */
 	margin-bottom: 10px; 
 	font-family: Tahoma, Geneva, sans-serif; 
 	font-size: 11px;
