@@ -60,7 +60,20 @@ nav a:hover {
   justify-content: center; /* Horizontally center */
   align-items: center; /* Vertically center */
   height: 100vh; /* This ensures the container takes up the full viewport height */
-  /* background-color: rgb(255, 0, 64); */
+
+}
+
+.symbols{
+	
+	position: absolute;
+    top: 0;
+    left: 0;
+	margin: 0px 0px 100vh 0px;
+}
+
+.content{
+
+	margin: 0px 0px 0px 40px;
 }
 
 /* _______________________________slides________________________________ */
@@ -71,11 +84,11 @@ nav a:hover {
 
 	/*Styling*/
 	width:100vh;
-  	height: 75vh;
+  	height: 80vh;
 	border-radius:18px;
 	top:150px;
 	bottom:0px;	
-  	margin: 0px 0px 0px 50px;
+  	margin: 0px 0px 0px -5px;
 	box-shadow: -5px 0px 20px rgb(136, 136, 136);;
 
 	/*background*/
@@ -99,22 +112,22 @@ nav a:hover {
 }
 #card2{
 	z-index: 2;
-	left:88vh;
+	left:81vh;
 }
 
 #card3{
 	z-index: 3;
-	left:93vh;
+	left:90vh;
 
 }
 
 #card4{
 	z-index: 4;
-	left:98vh;
+	left:99vh;
 }
 #card5{
 	z-index: 5;
-	left:103vh;
+	left:108vh;
 }
 
 /*________________________card(slides) hover___________________________*/
@@ -208,4 +221,37 @@ nav a:hover {
 	font-family: Tahoma, Geneva, sans-serif; 
 	font-size: 11px;
 }
+/* ______________________screen display________________________ */
+/* Responsive styles for mobile devices */
 
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Responsive styles for tablets and larger screens */
+
+@media (min-width: 769px) {
+    header {
+        padding: 20px;
+    }
+
+    nav ul {
+        text-align: right;
+    }
+
+    nav li {
+        display: inline;
+        margin: 0 20px;
+    }
+}
