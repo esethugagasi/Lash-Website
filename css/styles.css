@@ -20,6 +20,7 @@
 .lash_logo{
 
 	height: 15vh;
+	
 }
 /* Reset default list styles */
 ul {
@@ -30,7 +31,7 @@ ul {
 
 /* Style the navigation bar */
 nav {
-    background-color: #f7bfd9;
+    background-color: #F7BFD9;
     color: white;
 	height: 16.6vh;
 	
@@ -90,6 +91,7 @@ nav a:hover {
 
 }
 
+
 #card1{
 	z-index: 1;
 	left:30vh;
@@ -133,6 +135,17 @@ nav a:hover {
 #card5:hover{
 	left: 4cm;
 }  
+/*________________________home___________________________*/
+
+.image_fl{
+	border: 2px solid black;
+}
+/*________________________about___________________________*/
+.image_fr{
+	border: 2px solid black;
+	margin: 25px 50px 30px 0px;
+	
+}
 
 /*________________________socials media___________________________*/
 
@@ -155,9 +168,7 @@ nav a:hover {
   max-width: 100%; /* Ensure images don't exceed their original width */
   border-radius: 25px;
 }
-.image_fr{
-	margin: 25px 50px 30px 0px;
-}
+
 
 /*________________________Portfolio___________________________*/
 
@@ -174,6 +185,7 @@ nav a:hover {
   width: 140px;
   max-width: 100%; /* Ensure images don't exceed their original width */
   height: auto; /* Maintain aspect ratio */
+  border: 2px solid black;
 }
 /*________________________Contact form___________________________*/
 
