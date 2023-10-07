@@ -1,52 +1,30 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
+// Create a new XMLHttpRequest object
+var xhr = new XMLHttpRequest();
 
-// Middleware
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+// Define the URL you want to send the POST request to
+var url = 'https://example.com/api';
 
-// Handle form submission
-app.post('/submit', (req, res) => {
-    const { name, phone, appointmentDetails } = req.body;
-
-    // Send SMS using Twilio
-    const twilio = require('twilio')(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
-    twilio.messages.create({
-        to: phone,
-        from: TWILIO_PHONE_NUMBER,
-        body: `Hello ${name}, your appointment details: ${appointmentDetails}`,
-    });
-
-    // Send email using Nodemailer
-    const nodemailer = require('nodemailer');
-    const transporter = nodemailer.createTransport({
-        service: 'your-email-service-provider',
-        auth: {
-            user: 'your-email@gmail.com',
-            pass: 'your-email-password',
-        },
-    });
-
-    const mailOptions = {
-        from: 'your-email@gmail.com',
-        to: 'developer@example.com',
-        subject: 'Appointment Confirmation',
-        text: `Appointment details: ${appointmentDetails}`,
-    };
-
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.error(error);
-        } else {
-            console.log('Email sent: ' + info.response);
-        }
-    });
-
-    // Respond to the user
-    res.send('Thank you! Your request has been received.');
+// Define the data you want to send in the request body (as a JSON string)
+var data = JSON.stringify({
+  key1: 'value1',
+  key2: 'value2'
 });
 
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
-});
+// Configure the request
+xhr.open('POST', url, true);
+xhr.setRequestHeader('Content-Type', 'application/json'); // Set the content type to JSON
+
+// Set up a callback function to handle the response
+xhr.onreadystatechange = function () {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    // Request was successful, handle the response here
+    var response = JSON.parse(xhr.responseText);
+    console.log(response);
+  } else if (xhr.readyState === 4 && xhr.status !== 200) {
+    // Request failed, handle the error here
+    console.error('Request failed with status code ' + xhr.status);
+  }
+};
+
+// Send the POST request with the data
+xhr.send(data);
