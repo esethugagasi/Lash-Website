@@ -1,177 +1,169 @@
-*{
-  
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
-    
-  }
-  html, body{
-    text-decoration: none;
-	font-family: 'Josefin Sans', sans-serif;
-	font-family: 'Kanit', sans-serif;
-  }
-  h2,h3{
-	font-weight: bolder;
-	margin-bottom: 5px;
-  }
-  /* ___________________________navigation bar______________________ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Kanit", sans-serif;
+}
+h2,
+h3 {
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+/* ___________________________navigation bar______________________ */
 
-    /* __logo style______ */
-.lash_logo{
-
-	height: 15vh;
-	
+/* __logo style______ */
+.lash_logo {
+  height: 15vh;
 }
 /* Reset default list styles */
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Style the navigation bar */
 nav {
-    background-color: #F7BFD9;
-    color: white;
-	height: 16.6vh;
-	
+  background-color: #f7bfd9;
+  color: white;
+  height: 16.6vh;
 }
 
 /* Style the navigation links */
 nav ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
 }
 
 nav a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 nav a:hover {
-    color: #ff5733; /* Change the color on hover */
+  color: #ff5733; /* Change the color on hover */
 }
 /* ___________________________container of the page______________________ */
-.container{
+.container {
   display: flex;
   justify-content: center; /* Horizontally center */
   align-items: center; /* Vertically center */
   height: 100vh; /* This ensures the container takes up the full viewport height */
-
 }
 
-.symbols{
-	
-	position: absolute;
-    top: 0;
-    left: 0;
-	margin: 0px 0px 100vh 0px;
+.symbols {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0px 0px 100vh 0px;
 }
 
-.content{
-
-	margin: 0px 0px 0px 40px;
+.content {
+  margin: 0px 0px 0px 40px;
+}
+.card1-description {
+  font-size: 15px;
 }
 
 /* _______________________________slides________________________________ */
-.card{
+.card {
+  /**positioning*/
+  position: absolute;
 
-	/**positioning*/
-	position: absolute;
+  /*Styling*/
+  width: 100vh;
+  height: 80vh;
+  border-radius: 18px;
+  top: 150px;
+  bottom: 0px;
+  margin: 0px 0px 0px -5px;
+  box-shadow: -5px 0px 20px rgb(136, 136, 136);
 
-	/*Styling*/
-	width:100vh;
-  	height: 80vh;
-	border-radius:18px;
-	top:150px;
-	bottom:0px;	
-  	margin: 0px 0px 0px -5px;
-	box-shadow: -5px 0px 20px rgb(136, 136, 136);;
+  /*background*/
+  background: url(../images/lash_bg.jpg);
+  /*background-color: white;*/
+  opacity: 0.5s;
 
-	/*background*/
-	background: url(../images/lash_bg.jpg);
-    /*background-color: white;*/
-	opacity:0.5s;
+  /*Topography*/
+  padding: 1cm;
 
-	/*Topography*/
-	padding:1cm;
-
-	/*Behavior*/
-	transition:left 0.7s;
-
+  /*Behavior*/
+  transition: left 0.7s;
 }
 
-
-#card1{
-	z-index: 1;
-	left:30vh;
-
+#card1 {
+  z-index: 1;
+  left: 30vh;
 }
-#card2{
-	z-index: 2;
-	left:81vh;
+#card2 {
+  z-index: 2;
+  left: 81vh;
 }
 
-#card3{
-	z-index: 3;
-	left:90vh;
-
+#card3 {
+  z-index: 3;
+  left: 90vh;
 }
 
-#card4{
-	z-index: 4;
-	left:99vh;
+#card4 {
+  z-index: 4;
+  left: 99vh;
 }
-#card5{
-	z-index: 5;
-	left:108vh;
+#card5 {
+  z-index: 5;
+  left: 108vh;
 }
 
 /*________________________card(slides) hover___________________________*/
 
-#card1:hover{
-	left:-1cm;
+#card1:hover {
+  left: -1cm;
 }
-#card2:hover{
-	left: 1cm;
- 
+#card2:hover {
+  left: 1cm;
 }
-#card3:hover{
-	left:2cm;
+#card3:hover {
+  left: 2cm;
 }
-#card4:hover{
-	left: 3cm;
+#card4:hover {
+  left: 3cm;
 }
-#card5:hover{
-	left: 4cm;
-}  
+#card5:hover {
+  left: 4cm;
+}
 /*________________________home___________________________*/
 
-.image_fl{
-	border: 2px solid black;
+.image_fl {
+  border: 2px solid black;
 }
 /*________________________about___________________________*/
-.image_fr{
-	border: 2px solid black;
-	margin: 25px 50px 30px 0px;
-	
+.image_fr {
+  border: 2px solid black;
+  margin: 25px 50px 30px 0px;
 }
 
 /*________________________socials media___________________________*/
 
-.social_links{
-
+.social_links {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
   gap: 25px; /* Gap between grid items */
   justify-items: center; /* Center items horizontally */
   margin-top: 50px;
 }
- /* Apply styles to the link items */
- .link-item {
+/* Apply styles to the link items */
+.link-item {
   text-align: center;
   width: 100%; /* Equal width for each link */
 }
@@ -182,12 +174,14 @@ nav a:hover {
   border-radius: 25px;
 }
 
-
 /*________________________Portfolio___________________________*/
 
 .portfolio-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
   gap: 15px; /* Gap between grid items */
   justify-items: center; /* Center items horizontally */
   margin-top: 20px;
@@ -202,56 +196,56 @@ nav a:hover {
 }
 /*________________________Contact form___________________________*/
 
-.contact_form { 
-	padding: 0; 
-	width: 410px; 
+.contact_form {
+  padding: 0;
+  width: 410px;
 }
 
-.contact_form form { 
-	margin: 0px; 
-	padding: 0px; 
+.contact_form form {
+  margin: 0px;
+  padding: 0px;
 }
 
-.contact_form form .input_field { 
-	width: 250px; 
-	padding: 3px; 
-	color: #ccc; 
-	border: 1px solid #444444;  
-	margin-bottom: 10px; 
-	font-family: Tahoma, Geneva, sans-serif; 
-	font-size: 11px;
+.contact_form form .input_field {
+  width: 250px;
+  padding: 3px;
+  color: #ccc;
+  border: 1px solid #444444;
+  margin-bottom: 10px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 11px;
 }
 /* ______________________screen display________________________ */
 /* Responsive styles for mobile devices */
 
 @media (max-width: 768px) {
-    header {
-        padding: 10px;
-    }
+  header {
+    padding: 10px;
+  }
 
-    nav ul {
-        text-align: center;
-    }
+  nav ul {
+    text-align: center;
+  }
 
-    nav li {
-        display: block;
-        margin: 10px 0;
-    }
+  nav li {
+    display: block;
+    margin: 10px 0;
+  }
 }
 
 /* Responsive styles for tablets and larger screens */
 
 @media (min-width: 769px) {
-    header {
-        padding: 20px;
-    }
+  header {
+    padding: 20px;
+  }
 
-    nav ul {
-        text-align: right;
-    }
+  nav ul {
+    text-align: right;
+  }
 
-    nav li {
-        display: inline;
-        margin: 0 20px;
-    }
+  nav li {
+    display: inline;
+    margin: 0 20px;
+  }
 }
